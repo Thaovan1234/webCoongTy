@@ -303,9 +303,9 @@ footer{
     }h3{
         width: 300px;
         font-size: 16px;
-        margin-left:55px;
+        margin-left:40px;
     }.under_header{
-        margin-left: 25px;
+        margin-left: 10px;
         font-size: 14px;
     }.head_main{
         font-size: 23px;
@@ -331,7 +331,7 @@ footer{
     }  .little_content a p {
         font-size: 16px !important;
         width: 300px !important;
-        margin-left: 20px; /* Sử dụng giá trị mặc định, ghi đè bằng !important */
+        margin-left: 20px; 
     }.head_main_2 {
         font-size: 22px;
     }
