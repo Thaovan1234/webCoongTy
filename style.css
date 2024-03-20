@@ -297,8 +297,8 @@ footer{
 @media (max-width: 412px){
    .header_text h1{
         font-size: 20px;
-        width: 150px;
-        margin-left: none;
+        width: 350px;
+        margin-left: 100px;
     }iframe{
         width: 370px;
         height: 250px;
