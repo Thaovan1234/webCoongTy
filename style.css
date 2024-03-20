@@ -4,14 +4,19 @@
     box-sizing: border-box;
     font-family: "Google Sans", Roboto, Arial, Helvetica, sans-serif;
 }
+body{
+    padding-right: 5px;
+}
 header .logo .logo_google{
     width: 80px;
     height: 90px;
 }
-nav {
+.nav {
     display: -webkit-flex; 
     display: flex;
     align-items: center;
+    background-color: white;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 nav .nav_content ul {
@@ -50,6 +55,7 @@ h3{
     width: 1330px;
     font-size: 25px;
     margin-top: 30px;
+    margin-left: 10px;
 }
 .under_header{
     text-align: center;
@@ -94,6 +100,7 @@ h3{
 .content_footer{
     width: 100%;
     margin-top: 50px;
+    margin-left: 5px;
     /* margin-left: 1px; */
 }
 footer{
@@ -176,4 +183,178 @@ footer{
   .footer-col{
     width: 100%;
 }
+}
+
+/* mobile nav */
+.nav-button{
+    font-size: 20px;
+    padding: 20px 0px;
+    display: none;
+    color: grey;
+}
+.nav__overlay{
+    position: fixed;
+    top:0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+    animation: fadeIn linear 0.2s;
+}
+.nav__mobile{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 320px;
+    max-width: 100%;
+    transform: translateX(-100%);
+
+    transition: transform linear 0.2s;
+}
+/* .nav_content_mobile{
+
+} */
+.ul_mobile{
+    margin-top: 24px;
+}
+.ul_mobile li{
+    list-style: none;
+}
+.nav_element_mobile{
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 15px 20px;
+    font-size: 1rem;
+
+}.nav_element_mobile:hover{
+    background-color: #f8f9fa;
+    border-radius: 50px;
+}
+.logo_google_mobile{
+    width: 100px;
+    height: 100px;
+}.logo_mobile{
+    height: 70px;
+    margin-left: 10px;
+}
+.nav__input:checked ~ .nav__overlay {
+    display: block;
+}
+.nav__input:checked ~ .nav__mobile{
+    transform: translate(0);
+
+}
+.close{
+    font-size: 20px;
+    margin-left:250px;
+    padding: 30px;
+    height: 10px;
+}
+@media (max-width:1024px) {
+    .nav-button{
+        display: block;
+        margin-right: 0; /* Remove the right margin */
+        margin-bottom: 10px;
+        margin-left: 20px;
+        margin-top: 3px; /* Add some bottom margin for spacing */
+    }
+    .nav__pc{
+        display: none;
+    }
+    .logo{
+        order: 1;
+        margin-left: 10px;
+    }.header_text h1{
+        font-size: 30px;
+    }iframe{
+        width: 800px;
+        height: 400px;
+    } h3{
+        width: 700px;
+        font-size: 30px;
+        margin-left:150px;
+    }.under_header{
+        font-size: 13px;
+        margin-left: 330px;
+    }#button1, #button2{
+        width: 400px;
+        height: 70px;
+    }.little_content a img{
+        max-width: 400px; 
+        height: auto;
+    } .little_content {
+        overflow: hidden; /* Prevents content from overflowing its container */
+    }
+
+    .little_content a {
+        display: block; /* Make the anchor tags block-level elements */
+    }
+
+}
+@media (max-width: 412px){
+    .header_text h1{
+        font-size: 20px;
+    }iframe{
+        width: 370px;
+        height: 250px;
+    }h3{
+        width: 300px;
+        font-size: 16px;
+        margin-left:55px;
+    }.under_header{
+        margin-left: 25px;
+        font-size: 14px;
+    }.head_main{
+        font-size: 23px;
+    }#button1, #button2{
+        width: 300px;
+        height: 50px;
+    }.little_content {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        margin-left: 10px;
+    }
+
+    .little_content a {
+        margin-bottom: 10px;
+    }
+
+    .little_content a img {
+        max-width: 320px; 
+        margin-left: 10px !important;
+        height: auto; 
+        display: block; 
+    }  .little_content a p {
+        font-size: 16px !important;
+        width: 300px !important;
+        margin-left: 20px; /* Sử dụng giá trị mặc định, ghi đè bằng !important */
+    }.head_main_2 {
+        font-size: 22px;
+    }
+}
+@media (max-width:414px){
+    header {
+        width: 100%;
+    }
+    .header_text h1 {
+        font-size: 40px;
+        margin-left: 150px;
+        width: 500px;
+    }
+    .nav {
+        width: 100%;
+        margin-left: 0; /* Thêm dòng này để loại bỏ margin-left */
+    }
+}
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
 }
